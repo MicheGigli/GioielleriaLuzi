@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <title>Gioielleria Luzi</title>
     <link rel="stylesheet" href="style.css">
+<script>
+  // Controlla se l’utente è loggato
+  const loggedUser = localStorage.getItem("loggedUser");
+  if (!loggedUser) {
+    // Se non loggato, reindirizza alla pagina di login
+    window.location.href = "login.html";
+  }
+</script>
 </head>
 <body>
     <header>
@@ -23,9 +31,11 @@
         <p>Eleganza, qualità e raffinatezza per ogni occasione.</p>
         <a class="button" href="prodotti.html">Scopri i nostri gioielli</a>
     </main>
-
+	
     <footer>
         <p>© 2025 Gioielleria Luzi. Tutti i diritti riservati.</p>
     </footer>
 </body>
 </html>
+
+
