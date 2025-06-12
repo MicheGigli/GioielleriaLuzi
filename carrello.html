@@ -17,7 +17,12 @@
             <a href="login.html">Accedi</a>
         </nav>
     </header>
-
+<script>
+  function logout() {
+    localStorage.removeItem("loggedUser");
+    window.location.href = "login.html";
+  }
+</script>
     <main>
         <h1>Il tuo carrello</h1>
 
