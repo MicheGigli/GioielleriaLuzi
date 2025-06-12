@@ -30,7 +30,7 @@ function login() {
     if (users[email] && users[email] === password) {
         localStorage.setItem("loggedUser", email);
         alert("Accesso effettuato!");
-        window.location.href = "index.html";
+        window.location.href = "index.html";  // qui
     } else {
         alert("Credenziali non valide!");
     }
