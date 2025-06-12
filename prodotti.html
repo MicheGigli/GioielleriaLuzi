@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Prodotti - Gioielleria Luzi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+    		<img src="img/logo.jpg" alt="Gioielleria Luzi" class="logo-img">
+	</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="prodotti.html">Prodotti</a>
+            <a href="carrello.html">Carrello</a>
+            <a href="login.html">Accedi</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>I nostri gioielli</h1>
+        <div class="catalogo">
+
+            <div class="prodotto">
+                <img src="img/1_v_550.png" alt="Anello oro con diamanti">
+                <h3>Anello oro 18kt con diamanti</h3>
+                <p>Eleganza senza tempo per ogni occasione.</p>
+                <p><strong>€ 950</strong></p>
+                <button onclick="aggiungiAlCarrello('Anello oro 18kt con diamanti', 950)">Aggiungi al carrello</button>
+            </div>
+
+            <div class="prodotto">
+                <img src="img/collana1.jpg" alt="Collana oro e perle">
+                <h3>Collana oro 18kt con perle naturali</h3>
+                <p>Design raffinato ed esclusivo.</p>
+                <p><strong>€ 1200</strong></p>
+                <button onclick="aggiungiAlCarrello('Collana oro 18kt con perle naturali', 1200)">Aggiungi al carrello</button>
+            </div>
+
+            <div class="prodotto">
+                <img src="img/orologio1.jpg" alt="Orologio elegante">
+                <h3>Orologio oro e acciaio</h3>
+                <p>Precisione e stile in un unico oggetto.</p>
+                <p><strong>€ 2300</strong></p>
+                <button onclick="aggiungiAlCarrello('Orologio oro e acciaio', 2300)">Aggiungi al carrello</button>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Gioielleria Luzi. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
