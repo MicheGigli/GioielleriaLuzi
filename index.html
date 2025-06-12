@@ -1,41 +1,158 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <title>Gioielleria Luzi</title>
-    <link rel="stylesheet" href="style.css">
-<script>
-  // Controlla se l’utente è loggato
-  const loggedUser = localStorage.getItem("loggedUser");
-  if (!loggedUser) {
-    // Se non loggato, reindirizza alla pagina di login
-    window.location.href = "login.html";
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gioielleria Luzi - Home</title>
+<style>
+  body {
+    margin: 0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
+    color: #111;
   }
-</script>
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #000; /* nero per header */
+    padding: 15px 30px;
+  }
+  header .logo img {
+    height: 60px;
+  }
+  nav a {
+    color: #b9975b; /* oro */
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 1.1em;
+  }
+  nav a:hover {
+    color: #d4af37; /* oro più brillante */
+  }
+  main {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+  }
+  h1 {
+    font-weight: 700;
+    color: #b9975b;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .prodotti {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 30px;
+  }
+  .prodotto {
+    border: 1px solid #b9975b;
+    border-radius: 8px;
+    padding: 15px;
+    background: #fff;
+    box-shadow: 0 0 8px rgba(185,157,85,0.2);
+    transition: transform 0.3s ease;
+  }
+  .prodotto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(185,157,85,0.4);
+  }
+  .prodotto img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 12px;
+  }
+  .prodotto h3 {
+    color: #000;
+    margin: 0 0 10px 0;
+    font-weight: 700;
+  }
+  .prodotto p {
+    font-size: 0.9em;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  .prodotto .prezzo {
+    font-weight: 700;
+    color: #b9975b;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+  }
+  .btn-acquista {
+    background-color: #b9975b;
+    border: none;
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+    transition: background-color 0.25s ease;
+  }
+  .btn-acquista:hover {
+    background-color: #d4af37;
+  }
+  footer {
+    background: #000;
+    color: #b9975b;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 0.9em;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    nav a {
+      margin-left: 15px;
+      font-size: 1em;
+    }
+    main {
+      padding: 20px 10px;
+    }
+  }
+</style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-    		<img src="img/logo.jpg" alt="Gioielleria Luzi" class="logo-img">
-	</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="prodotti.html">Prodotti</a>
-            <a href="carrello.html">Carrello</a>
-            <a href="login.html">Accedi</a>
-        </nav>
-    </header>
 
-    <main>
-        <h1>Benvenuti nella Gioielleria Luzi</h1>
-        <p>Eleganza, qualità e raffinatezza per ogni occasione.</p>
-        <a class="button" href="prodotti.html">Scopri i nostri gioielli</a>
-    </main>
-	
-    <footer>
-        <p>© 2025 Gioielleria Luzi. Tutti i diritti riservati.</p>
-    </footer>
+<header>
+  <div class="logo">
+    <img src="img/logo.jpg" alt="Gioielleria Luzi" />
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="prodotti.html">Prodotti</a>
+    <a href="login.html">Login</a>
+    <a href="carrello.html">Carrello</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Benvenuti alla Gioielleria Luzi</h1>
+  <div class="prodotti">
+    <div class="prodotto">
+      <img src="img/1_v_550.png" alt="Anello Oro" />
+      <h3>Anello Oro 18kt con Diamanti</h3>
+      <p>Eleganza senza tempo per ogni occasione.</p>
+      <div class="prezzo">€ 950</div>
+      <button class="btn-acquista">Acquista</button>
+    </div>
+    <div class="prodotto">
+      <img src="img/2_v_550.png" alt="Collana Oro" />
+      <h3>Collana Oro 18kt</h3>
+      <p>Design raffinato e luminoso.</p>
+      <div class="prezzo">€ 780</div>
+      <button class="btn-acquista">Acquista</button>
+    </div>
+    <!-- Aggiungi altri prodotti simili -->
+  </div>
+</main>
+
+<footer>
+  &copy; 2025 Gioielleria Luzi - Tutti i diritti riservati
+</footer>
+
 </body>
 </html>
-
-
