@@ -17,7 +17,12 @@
             <a href="login.html">Accedi</a>
         </nav>
     </header>
-
+<script>
+  function logout() {
+    localStorage.removeItem("loggedUser");
+    window.location.href = "login.html";
+  }
+</script>
     <main>
         <h1>Grazie per il tuo ordine!</h1>
         <p>Il tuo ordine è stato ricevuto. Ti contatteremo al più presto.</p>
